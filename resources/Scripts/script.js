@@ -43,4 +43,21 @@ const Game = (() => {
         }
     };
 
+    const makeMove = (index) => {
+        if (!gameOver && !board[index]) {
+            board[index] = currentPlayer.symbol;
+            displayBoard();
+            checkWinner();
+            currentPlayer = currentPlayer === player1 ? player2 : player1;
+        }
+    };
+
+    const restartGame = () => {
+        board.fill("");
+        currentPlayer = player1;
+        gameOver = false;
+        messageElement.textContent = "";
+        displayBoard();
+    };
+
 })
