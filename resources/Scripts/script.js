@@ -27,4 +27,20 @@ const Game = (() => {
             boardElement.appendChild(cellElement);
         });
     };
+
+    const checkWinner = () => {
+        for (const combo of winningCombos) {
+            const [a, b, c] = combo;
+            if (board[a] && board[a] === board[b] && board[a] === board[c]) {
+                gameOver = true;
+                messageElement.textContent = `${currentPlayer.name} wins!`;
+                return;
+            }
+        }
+        if (!board.includes("")) {
+            gameOver = true;
+            messageElement.textContent = "It's a tie!";
+        }
+    };
+
 })
