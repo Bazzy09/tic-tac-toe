@@ -59,7 +59,6 @@ const Game = (() => {
         messageElement.textContent = "";
         displayBoard();
     };
-
     
     const player1 = Player("Player 1", "X");
     const player2 = Player("Player 2", "O");
