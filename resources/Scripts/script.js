@@ -68,4 +68,7 @@ const Game = (() => {
     restartButton.addEventListener("click", restartGame);
 
     return { displayBoard };
-})
+}) ()
+
+Game.displayBoard();
+
