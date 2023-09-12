@@ -60,4 +60,12 @@ const Game = (() => {
         displayBoard();
     };
 
+    
+    const player1 = Player("Player 1", "X");
+    const player2 = Player("Player 2", "O");
+    currentPlayer = player1;
+
+    restartButton.addEventListener("click", restartGame);
+
+    return { displayBoard };
 })
