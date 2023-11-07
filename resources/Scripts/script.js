@@ -70,4 +70,3 @@ const Game = (() => {
 }) ()
 
 Game.displayBoard();
-
